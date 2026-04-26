@@ -1,0 +1,14 @@
+
+
+.seccion-principal{
+background: linear-gradient(180deg,#c084fc,#c084fc);
+padding-top: 60px;
+padding-bottom: 60px;
+}
+
+.sobre-box{
+background:white;
+border-radius:15px;
+padding:40px;
+box-shadow:0px 4px 15px rgba(0,0,0,0.08);
+}

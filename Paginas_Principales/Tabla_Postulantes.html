@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Postulantes - Tambo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">
+        Sistema de Reclutamiento Tambo - Postulantes
+    </h2>
+
+    <!-- Tabla -->
+    <div class="card shadow">
+        <div class="card-body">
+
+            <table class="table table-striped table-hover align-middle">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>DNI</th>
+                        <th>Distrito</th>
+                        <th>Puesto</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaPostulantes">
+
+                    <tr>
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>12345678</td>
+                        <td>San Juan de Lurigancho</td>
+                        <td>Atención en Caja</td>
+                        <td>
+                            <span class="badge bg-warning">Pendiente</span>
+                        </td>
+                        <td>
+
+                            <a href="detallePostulante.html" class="btn btn-info btn-sm">
+                                Ver
+                            </a>
+
+                            <a href="editarPostulante.html" class="btn btn-primary btn-sm">
+                                Editar
+                            </a>
+
+                            <button class="btn btn-danger btn-sm"
+                                    onclick="eliminarFila(this)">
+                                Eliminar
+                            </button>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>María López</td>
+                        <td>87654321</td>
+                        <td>Los Olivos</td>
+                        <td>Atención en Tienda</td>
+                        <td>
+                            <span class="badge bg-success">Aprobado</span>
+                        </td>
+                        <td>
+
+                            <a href="#" class="btn btn-info btn-sm">Ver</a>
+                            <a href="#" class="btn btn-primary btn-sm">Editar</a>
+
+                            <button class="btn btn-danger btn-sm"
+                                    onclick="eliminarFila(this)">
+                                Eliminar
+                            </button>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+<footer class="py-4 mt-4">
+<div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <span>Tambinho © 2026</span>
+     <div class="d-flex gap-3 mt-2 mt-md-0">
+        <a href="#Login"><i class="bi bi-person"></i> Login</a>
+         <a href="#Main"><i class="bi bi-house-door"></i> Main</a>
+         <a href="#Contacto"><i class="bi bi-envelope"></i> Contacto</a>
+        <a href="#Gestion"><i class="bi bi-briefcase"></i> Gestion</a>
+         <a href="#Publicidad"><i class="bi bi-megaphone"></i> Publicidad</a>
+    </div>        
+ </div>
+</footer>
+
+<script>
+
+function eliminarFila(boton){
+
+    if(confirm("¿Desea eliminar este postulante?")){
+
+        let fila = boton.closest("tr");
+        fila.remove();
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
